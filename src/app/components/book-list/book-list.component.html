@@ -1,0 +1,33 @@
+<div>
+
+  <button class="btn btn-primary" [routerLink]="['add']">
+    Thêm mới sách
+  </button>
+</div>
+
+<table class="table card card-body" style="margin-top: 100px; width: 700px; margin-left: auto;margin-right: auto">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col" >Tên sách</th>
+    <th scope="col">Tác giả</th>
+    <th scope="col">ưerwer</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books;index as i">
+    <th scope="row">{{i+1}}</th>
+    <a [routerLink]="['detail/',book.id]"><td >{{book.title}}</td></a>
+    <td>{{book.author}}</td>
+    <td>
+      <button class="btn btn-danger" [routerLink]="['/delete',book.id]">
+        Xoá</button>
+    </td>
+    <td>
+      <button class="btn btn-warning" [routerLink]="['/edit',book.id]">
+        Sửa</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

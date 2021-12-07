@@ -1,0 +1,23 @@
+<div class="col-6">
+  <button [routerLink]="['']" class="bnt btn-primary">
+    Xem danh sách
+  </button>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <h1>Chi tiết sách</h1>
+  </div>
+</div>
+
+
+<p>Tên sách:{{book.title}}</p>
+
+<p>Tác giả:{{book.author}}</p>
+<p>Mô tả:</p>
+{{book.description}}
+
+
+<div>
+  <button (click)="deleteCustomer()">Xoá sách</button>
+</div>
